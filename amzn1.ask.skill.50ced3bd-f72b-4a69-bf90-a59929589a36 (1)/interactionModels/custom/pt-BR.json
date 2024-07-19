@@ -1,0 +1,705 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "name",
+              "elicitationRequired": true,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1480361224266.236809546752",
+                "confirmation": "Confirm.Slot.1480361224266.236809546752"
+              }
+            },
+            {
+              "name": "type",
+              "elicitationRequired": true,
+              "type": "types",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1480361224266.90581539268"
+              }
+            },
+            {
+              "name": "number",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1480361224266.1077567268992"
+              }
+            },
+            {
+              "name": "abilities",
+              "elicitationRequired": true,
+              "type": "PokemonAbilities",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1480361224266.393421305052"
+              }
+            },
+            {
+              "name": "evolution",
+              "elicitationRequired": false,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "CadastrarPokemonIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.452903416332"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "elicitationRequired": false,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "ExcluirPokemonIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1032364577222"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "elicitationRequired": false,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "type",
+              "elicitationRequired": false,
+              "type": "types",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "number",
+              "elicitationRequired": false,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "abilities",
+              "elicitationRequired": false,
+              "type": "PokemonAbilities",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "evolution",
+              "elicitationRequired": false,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "AtualizarInformacoesDoPokemonIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.785618454595"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "elicitationRequired": true,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1396966744093.710229442079"
+              }
+            }
+          ],
+          "name": "BuscarPokemonPorNomeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "elicitationRequired": true,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.663005146850.1544712244146"
+              }
+            }
+          ],
+          "name": "ConsultarEvolucoesDoPokemonIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "type",
+              "elicitationRequired": true,
+              "type": "types",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.401406457141.196256457127"
+              }
+            }
+          ],
+          "name": "BuscarPokemonPorTipoIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "olá",
+            "como vai você",
+            "diga oi mundo",
+            "diga oi",
+            "oi",
+            "diga olá mundo",
+            "diga olá"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "Adicionar pokemon {name}",
+                "Eu quero cadastrar o pokemon {name}",
+                "{name}",
+                "Pokemon {name}"
+              ]
+            },
+            {
+              "name": "type",
+              "type": "types",
+              "samples": [
+                "{type}",
+                "Tipo {type}",
+                "O tipo {type}"
+              ]
+            },
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{number}",
+                "Numero {number}"
+              ]
+            },
+            {
+              "name": "abilities",
+              "type": "PokemonAbilities",
+              "samples": [
+                "As habilidades {abilities}",
+                "A habilidade {abilities}",
+                "{abilities}"
+              ]
+            },
+            {
+              "name": "evolution",
+              "type": "AMAZON.FirstName"
+            }
+          ],
+          "name": "CadastrarPokemonIntent",
+          "samples": [
+            "Insira um Pokemon",
+            "Adicionar Pokemon",
+            "Cadastrar Pokemon",
+            "Adicionar Pokémon {name} tipo {type}  número {number}  habilidades {abilities} e evolução {evolution}",
+            "Cadastrar novo Pokémon chamado {name} do tipo {type}  número {number}  com habilidades {abilities} e evolução {evolution}",
+            "Insira Pokémon {name} com o tipo {type}  número {number}  habilidades {abilities} e evolução {evolution}",
+            "Cadastrar Pokémon {name} do tipo {type} com número {number} e habilidades {abilities}",
+            "Registrar Pokémon {name} tipo {type} número {number} com habilidades {abilities}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "TipoPokeIntent",
+          "samples": [
+            "Me fale sobre os tipos de pokemons",
+            "Gostaria de saber mais sobre os tipos de Pokémon"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ListarPokemonIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "pokemon {name}",
+                "{name}"
+              ]
+            }
+          ],
+          "name": "BuscarPokemonPorNomeIntent",
+          "samples": [
+            "diga os pokémons chamados {name}",
+            "pokémons com o nome {name}",
+            "procurar pokémons chamados {name}",
+            "buscar pokémons chamados {name}",
+            "quais pokémons têm o nome {name}",
+            "quais são os pokémons chamados {name}",
+            "mostre-me pokémons chamados {name}",
+            "listar pokémons com o nome {name}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "type",
+              "type": "types",
+              "samples": [
+                "Tipo {type}",
+                "{type}"
+              ]
+            }
+          ],
+          "name": "BuscarPokemonPorTipoIntent",
+          "samples": [
+            "Pokemons por tipo",
+            "Procurar pokémons do tipo {type}",
+            "Me mostre os pokémons do tipo {type}",
+            "Pokémons do tipo {type}",
+            "Diga-me os pokémons do tipo {type}",
+            "Liste os pokémons do tipo {type}",
+            "Pode me dizer os pokémons do tipo {type}",
+            "Listar todos os pokemons do tipo {type}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName"
+            }
+          ],
+          "name": "ExcluirPokemonIntent",
+          "samples": [
+            "remover {name}",
+            "apagar {name}",
+            "excluir {name}",
+            "remover o pokémon {name}",
+            "apagar o pokémon {name}",
+            "excluir o pokémon {name}",
+            "remover pokémon chamado {name}",
+            "apagar pokémon chamado {name}",
+            "excluir pokémon chamado {name}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName"
+            },
+            {
+              "name": "type",
+              "type": "types"
+            },
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "abilities",
+              "type": "PokemonAbilities"
+            },
+            {
+              "name": "evolution",
+              "type": "AMAZON.FirstName"
+            }
+          ],
+          "name": "AtualizarInformacoesDoPokemonIntent",
+          "samples": [
+            "modificar o pokémon {name} para tipo {type}  número {number}  habilidades {abilities} e evolução {evolution}",
+            "atualizar as informações do pokémon {name} com tipo {type}  número {number}  habilidades {abilities} e evolução {evolution} ",
+            "atualizar o pokemon chamado {name} com tipo {type}  numero {number}  habilidades {abilities} e evolucao {evolution}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "AdicionarNotaAoPokemonIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "ListarTiposDePokemonIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "pokemon {name}",
+                "{name}"
+              ]
+            }
+          ],
+          "name": "ConsultarEvolucoesDoPokemonIntent",
+          "samples": [
+            "Evoluções pokemon",
+            "quais são os pokémons que evoluem de {name}",
+            "o que evolui de {name}",
+            "mostre as evoluções de {name}",
+            "quais são as evoluções de {name}",
+            "consultar evoluções do pokémon {name}",
+            "consultar as evoluções de {name}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName"
+            }
+          ],
+          "name": "ConsultarHabilidadesDoPokemonIntent",
+          "samples": [
+            "quais são as habilidades do pokémon {name}",
+            "ver habilidades do pokémon {name}",
+            "consultar habilidades do pokémon {name}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ListarPokemonsPorNumeroIntent",
+          "samples": [
+            "quais são os pokémons em ordem numérica",
+            "pokémons em ordem numérica",
+            "mostrar pokémons em ordem numérica",
+            "listar pokémons por número"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName"
+            }
+          ],
+          "name": "ConsultarDetalhesDoPokemonIntent",
+          "samples": [
+            "quem é o pokémon {name}",
+            "informações sobre o pokémon {name}",
+            "detalhes do pokémon {name}",
+            "consultar detalhes do pokémon {name}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SortearPokemonIntent",
+          "samples": [
+            "sorteie um pokémon",
+            "escolher um pokémon",
+            "sortear um pokémon"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Fada"
+              }
+            },
+            {
+              "name": {
+                "value": "Aço"
+              }
+            },
+            {
+              "name": {
+                "value": "Sombrio"
+              }
+            },
+            {
+              "name": {
+                "value": "Dragao"
+              }
+            },
+            {
+              "name": {
+                "value": "Fantasma"
+              }
+            },
+            {
+              "name": {
+                "value": "Pedra"
+              }
+            },
+            {
+              "name": {
+                "value": "Inseto"
+              }
+            },
+            {
+              "name": {
+                "value": "psiquico"
+              }
+            },
+            {
+              "name": {
+                "value": "Voador"
+              }
+            },
+            {
+              "name": {
+                "value": "Terra"
+              }
+            },
+            {
+              "name": {
+                "value": "Veneno"
+              }
+            },
+            {
+              "name": {
+                "value": "Lutador"
+              }
+            },
+            {
+              "name": {
+                "value": "Gelo"
+              }
+            },
+            {
+              "name": {
+                "value": "Eletrico"
+              }
+            },
+            {
+              "name": {
+                "value": "Grama"
+              }
+            },
+            {
+              "name": {
+                "value": "Agua"
+              }
+            },
+            {
+              "name": {
+                "value": "Fogo"
+              }
+            }
+          ],
+          "name": "types"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Guts"
+              }
+            },
+            {
+              "name": {
+                "value": "Swarm "
+              }
+            },
+            {
+              "name": {
+                "value": "Compound Eyes"
+              }
+            },
+            {
+              "name": {
+                "value": "Run Away"
+              }
+            },
+            {
+              "name": {
+                "value": "Keen Eye"
+              }
+            },
+            {
+              "name": {
+                "value": "Shed Skin"
+              }
+            },
+            {
+              "name": {
+                "value": "Shield Dust"
+              }
+            },
+            {
+              "name": {
+                "value": "Torrent"
+              }
+            },
+            {
+              "name": {
+                "value": "Blaze"
+              }
+            },
+            {
+              "name": {
+                "value": "Overgrow"
+              }
+            }
+          ],
+          "name": "PokemonAbilities"
+        }
+      ],
+      "invocationName": "pokedex virtual"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tem certeza que deseja cadastrar o pokemon {name} com o tipo {type} numero {number}  habilidades {abilities} e evolução {evolution} ?"
+          }
+        ],
+        "id": "Confirm.Intent.452903416332"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tem certeza que deseja apagar {name}"
+          }
+        ],
+        "id": "Confirm.Intent.1032364577222"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tem certeza que gostaria de atualizar as informações do pokemon {name} ?"
+          }
+        ],
+        "id": "Confirm.Intent.785618454595"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Diga o nome do Pokémon que você deseja cadastrar."
+          }
+        ],
+        "id": "Elicit.Slot.1480361224266.236809546752"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tem certeza que o nome do pokemon que você deseja cadastrar é {name}"
+          }
+        ],
+        "id": "Confirm.Slot.1480361224266.236809546752"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Agora, por favor, diga o tipo do Pokémon."
+          }
+        ],
+        "id": "Elicit.Slot.1480361224266.90581539268"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual numero do pokemon que deseja cadastrar na dex"
+          }
+        ],
+        "id": "Elicit.Slot.1480361224266.1077567268992"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual habilidade o pokemon possui."
+          }
+        ],
+        "id": "Elicit.Slot.1480361224266.393421305052"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a evolução desse pokemon?"
+          }
+        ],
+        "id": "Elicit.Slot.1480361224266.1368277251331"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Diga o nome do pokemon que deseja buscar"
+          }
+        ],
+        "id": "Elicit.Slot.1396966744093.710229442079"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Diga o nome do pokemon da qual deseja saber a evolução"
+          }
+        ],
+        "id": "Elicit.Slot.663005146850.1544712244146"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Informe o tipo dos pokemons que deseja procurar"
+          }
+        ],
+        "id": "Elicit.Slot.401406457141.196256457127"
+      }
+    ]
+  }
+}
